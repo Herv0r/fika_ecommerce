@@ -1,22 +1,35 @@
-import Image from "next/image"
-import { User, Bag } from "../images/index.js"
-import logo from "/public/L_Logotipo-Blue.svg"
-import Link from "next/link.js"
+"use client"
 import { Roboto } from "next/font/google"
+import { useState } from "react"
+import { ModalComponent } from "./ModalNavbar"
+import Image from "next/image"
+import Link from "next/link.js"
+import logo from "/public/L_Logotipo-Blue.svg"
+import user from "/public/user.svg"
+import bag from "/public/bag.svg"
 
 const roboto = Roboto({ subsets: ['latin'], weight: '300'})
 
 const Navbar = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const toggleSidebar = () => {
+    setOpenModal(!openModal);
+  }
+
   return (
     <nav className={`${roboto.className}`}>
-      <div className="flex justify-between py-5 px-10 items-center ">
-        <div className="w-1/3">
+      <div className="flex justify-between py-5 md:px-8 items-center ">
+        <div className="w-1/3 hidden md:block">
           <ul className="flex space-x-5 list-none ">
             <li>Inicio</li>
             <li>Tienda</li>
             <li>Acerca</li>
             <li>Contacto</li>
           </ul>
+        </div>
+        <div className="w-1/3 hidden max-md:block pl-0">
+          <ModalComponent />
         </div>
 
         <div className="w-1/3">
@@ -30,22 +43,25 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="flex space-x-5 w-1/3 justify-end">
-          <div className="flex space-x-2">
+        <div className="flex md:space-x-5 w-1/3 justify-end max-sm:pr-5">
+          <div className="hidden md:flex">
             <Image 
-              src={User} 
+              src={user} 
               width={24}
               alt="user icon"/>
-            <h3>Log In</h3>
+            <h3 className="hidden md:block">Log In</h3>
+            <h3 className="hidden max-md:block px-2">|</h3>
           </div>
           <Image 
-            src={Bag} 
+            src={bag} 
             width={24}
-            alt="cart icon"/>
+            alt="cart icon"
+            />
         </div>
       </div>
     </nav>
   )
 }
+
 
 export default Navbar
