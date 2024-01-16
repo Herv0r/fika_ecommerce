@@ -9,6 +9,10 @@ const config: Config = {
   ],
   presets: [require("keep-react/preset")],
   theme: {
+    colors: {
+      fika: "#1F3D68",
+      f: "#FFFFFF"
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

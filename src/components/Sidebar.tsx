@@ -13,7 +13,7 @@ import {
 
 export const SidebarComponent = () => {
   return (
-    <Sidebar aria-label="Sidebar with multi-level dropdown example">
+    <Sidebar className="bg-f" aria-label="Sidebar with multi-level dropdown example">
         <Sidebar.ItemGroup>
           <Sidebar.Item href="#" icon={<SquaresFour size={24} />}>
             Dashboard

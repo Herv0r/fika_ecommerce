@@ -24,7 +24,7 @@ export const ModalComponent = () => {
         onClose={onClickTwo}
         position="top-left"
       >
-        <div className="flex justify-end m-0 p-0">
+        <div className="flex justify-end bg-f">
           <Button onClick={onClickTwo} type='text-button' className="text-gray-400"> 
             <X size={25} />
           </Button>

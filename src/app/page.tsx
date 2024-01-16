@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { ModalComponent } from "@/components/ModalNavbar";
+import HeroSection from "@/components/Hero";
+import Producs from "@/components/Producs";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-      <h1>Hero Section</h1>
-      <nav>
+    <main className="main">
+      <HeroSection />
+      <Producs />
+      {/* <nav>
         <ul>
           <li><Link href="/men">Men's Apparel</Link></li>
           <li><Link href="/women">Women's Apparel</Link></li>
@@ -23,7 +24,7 @@ export default function Home() {
           <div className="text-center">Featured Products</div>
           <div className="text-center">New Arrivals</div>
           <div className="text-center">Special Offers</div>
-      </div>
+      </div> */}
     </main>
   )
 }
