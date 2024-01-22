@@ -1,12 +1,18 @@
 import Link from "next/link";
 import HeroSection from "@/components/Hero";
 import Producs from "@/components/Producs";
+import Brands from '@/components/Brands'
 
 export default function Home() {
   return (
     <main className="main">
       <HeroSection />
       <Producs />
+      <Brands />
+
+
+
+
       {/* <nav>
         <ul>
           <li><Link href="/men">Men's Apparel</Link></li>

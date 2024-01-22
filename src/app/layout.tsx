@@ -6,6 +6,8 @@ import Alert from '@/components/Alert'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
+
+
 const inter = Inter({ subsets: ['cyrillic']})
 
 export const metadata: Metadata = {
